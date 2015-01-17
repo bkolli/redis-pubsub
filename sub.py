@@ -8,7 +8,8 @@ def callback():
 	sub.subscribe('data')
 	while True:
 		for m in sub.listen():
-			print m #'Recieved: {0}'.format(m['data'])
+			print m
+			print 'Recieved: {0}'.format(m['data'])
 
 def main():
 	t = threading.Thread(target=callback)
